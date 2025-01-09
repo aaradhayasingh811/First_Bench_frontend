@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Chart } from "react-google-charts";
 
 export const data = [
@@ -14,28 +14,53 @@ export const data = [
 
 export const options = {
   hAxis: {
-    title: "Slots", // X-axis label
+    title: "Slots",
   },
   vAxis: {
-    title: "Accuracy (%)", // Y-axis label
+    title: "Accuracy (%)",
     format: "#'%'",
     viewWindow: {
       min: 0,
-      max: 100, // Ensure the Y-axis represents percentage values properly
+      max: 100,
     },
   },
-  legend: { position: "none" }, // Hide the legend if not needed
+  legend: { position: "none" },
 };
 
 export function Barchart() {
+  const chartRef = useRef(null);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      // Target the SVG bars after the chart is rendered
+      const svg = chartRef.current?.querySelector("svg");
+      if (svg) {
+        const bars = svg.querySelectorAll("rect[fill]");
+        bars.forEach((bar) => {
+          const height = bar.getAttribute("height");
+          const width = bar.getAttribute("width");
+
+          // Only round top corners by clipping the bottom
+          bar.setAttribute("rx", "10"); // Top-left corner
+          bar.setAttribute("ry", "10"); // Top-right corner
+
+          // Clip the bottom to make the bottom square (no rounding)
+          bar.style.clipPath = `polygon(0 0, 100% 0, 100% ${height}, 0 ${height})`;
+        });
+      }
+    }, 500); // Ensure the chart is fully rendered
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <Chart
-      chartType="ColumnChart"
-      className="h-72"
-      // width="100%"
-      // height="400px"
-      data={data}
-      options={options}
-    />
+    <div ref={chartRef}>
+      <Chart
+        chartType="ColumnChart"
+        className="h-72"
+        data={data}
+        options={options}
+      />
+    </div>
   );
 }
