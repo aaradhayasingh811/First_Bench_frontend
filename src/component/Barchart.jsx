@@ -1,60 +1,70 @@
-import React, { useEffect, useRef } from "react";
-import { Chart } from "react-google-charts";
+import React, { useRef } from "react";
+import { Bar } from "react-chartjs-2";
+import { Chart as ChartJS, BarElement, CategoryScale, LinearScale, Tooltip, Title, Legend } from "chart.js";
 
-export const data = [
-  ["Slots", "Accuracy", { role: "style" }],
-  ["1", 80, "color: #8486D6; stroke-width: 1; opacity: 0.9"], // Custom style
-  ["2", 45, "color: #8486D6; stroke-width: 1; opacity: 0.9"],
-  ["3", 30, "color: #8486D6; stroke-width: 1; opacity: 0.9"],
-  ["4", 60, "color: #8486D6; stroke-width: 1; opacity: 0.9"],
-  ["5", 58, "color: #8486D6; stroke-width: 1; opacity: 0.9"],
-  ["6", 48, "color: #8486D6; stroke-width: 1; opacity: 0.9"],
-  ["7", 70, "color: #8486D6; stroke-width: 1; opacity: 0.9"],
-];
-
-
-export const options = {
-  hAxis: {
-    title: "Slots",
-  },
-  vAxis: {
-    title: "Accuracy (%)",
-    format: "#'%'",
-    viewWindow: {
-      min: 0,
-      max: 100,
-    },
-  },
-  legend: { position: "none" },
-};
+// Register the necessary Chart.js components
+ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Title, Legend);
 
 export function Barchart() {
   const chartRef = useRef(null);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      // Target the SVG bars after the chart is rendered
-      const svg = chartRef.current?.querySelector("svg");
-      if (svg) {
-        const bars = svg.querySelectorAll("rect[fill]");
-        bars.forEach((bar) => {
-          bar.setAttribute("rx", "10"); // Rounded corners
-          bar.setAttribute("ry", "10"); // Rounded corners
-        });
-      }
-    }, 500); // Ensure the chart is fully rendered
+  const data = {
+    labels: ["1", "2", "3", "4", "5", "6", "7"],
+    datasets: [
+      {
+        label: "Accuracy",
+        data: [80, 45, 30, 60, 58, 48, 70],
+        backgroundColor: "rgba(132, 134, 214, 0.9)", // Custom color with opacity
+        borderColor: "#8486D6", // Border color
+        borderWidth: 1,
+        borderRadius: 10,
+        barThickness: 20, 
+      },
+    ],
+  };
 
-    return () => clearTimeout(timer);
-  }, []);
+  const options = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false }, // Hide legend
+      title: {
+        display: false,
+        text: "Accuracy per Slot",
+      },
+    },
+    scales: {
+      x: {
+        title: {
+          display: true,
+          text: "Slots",
+        },
+        grid: {
+          display: false, // Hide vertical grid lines
+        },
+      },
+      y: {
+        title: {
+          display: true,
+          text: "Accuracy (%)",
+        },
+        ticks: {
+          callback: (value) => `${value}%`, // Add '%' to y-axis labels
+          stepSize: 25, // Step size between values
+        },
+        grid: {
+          drawBorder: true, // Display border line
+          color: "#e0e0e0", // Horizontal grid line color
+        },
+        min: 0,
+        max: 100, // Explicitly set max and min values
+      },
+    },
+  };
 
   return (
-    <div ref={chartRef}>
-      <Chart
-        chartType="ColumnChart"
-        className="h-72"
-        data={data}
-        options={options}
-      />
+    <div style={{ height: "300px", width: "100%" }} ref={chartRef}>
+      <Bar data={data} options={options} />
     </div>
   );
 }

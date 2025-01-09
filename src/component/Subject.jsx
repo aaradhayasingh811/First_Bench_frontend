@@ -4,7 +4,7 @@ export const Subject = () => {
 
     const tagList = [
         {
-            color:"#009990",
+            color:"#58B7B4",
             text: "Geography",
         },
         {
@@ -12,7 +12,7 @@ export const Subject = () => {
             text: "Politics",
         },
         {
-            color:"#009990",
+            color:"#58B7B4",
             text: "Current Affairs",
         },
         {
@@ -20,7 +20,7 @@ export const Subject = () => {
             text: "General Studies",
         },
         {
-            color:"#009990",
+            color:"#58B7B4",
             text: "Mathematics",
         },
         {
@@ -36,7 +36,7 @@ export const Subject = () => {
             text: "Indian History",
         },
         {
-            color:"#009990",
+            color:"#58B7B4",
             text: "Economics",
         },
         
