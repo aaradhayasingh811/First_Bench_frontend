@@ -15,7 +15,7 @@ import Data from "./component/Data";
 import { Subject } from "./component/Subject";
 import Response from "./component/Response";
 import Suggestions from "./component/Suggestions";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Bottom from "./component/Bottom";
 import Scale from "./component/Scale";
 import { Barchart } from "./component/Barchart";
@@ -23,6 +23,30 @@ import TimeTaken from "./component/TimeTaken";
 
 function App() {
   const [result, setResult] = useState(false);
+  const [windowSize, setWindowSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Ensure `result` is reset when the screen width is greater than 1024px
+    if (windowSize.width > 1024) {
+      setResult(false);
+    }
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [windowSize.width]);
 
   const handleShow = () => {
     setResult(!result);
@@ -32,7 +56,10 @@ function App() {
     <>
       <BrowserRouter>
         <Navbar />
-        <div className="content w-full flex 2xl:px-32 px-8 " style={{backgroundColor:"rgb(249,250,252)"}}>
+        <div
+          className="content w-full flex 2xl:px-32 px-8 "
+          style={{ backgroundColor: "rgb(249,250,252)" }}
+        >
           <div className="lg:w-[30%] p-5 lg:flex flex-col hidden">
             <Result className="rounded-lg" />
           </div>
@@ -46,9 +73,9 @@ function App() {
             </button>
             {result && <Result abs="true" className="left-0" />}
             <div className="flex gap-4 justify-center sm:flex-row flex-col">
-              <Compare  />
-              <Compare  />
-              <Compare  />
+              <Compare />
+              <Compare />
+              <Compare />
             </div>
             <div className="flex gap-2 min-[1143px]:flex-row flex-col">
               <Block
@@ -87,7 +114,7 @@ function App() {
                 className="w-1/2"
                 icon={<FaTimeline />}
                 text="Time Taken"
-                children={<Scale r1="40%" g1="33%" r2="40%" g2="65%"  />}
+                children={<Scale r1="40%" g1="33%" r2="40%" g2="65%" />}
               />
             </div>
           </div>

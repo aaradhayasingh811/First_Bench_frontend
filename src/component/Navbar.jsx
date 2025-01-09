@@ -10,11 +10,36 @@ import { TbLetterP } from "react-icons/tb";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoMenu } from "react-icons/io5";
 import { RxCross1 } from "react-icons/rx";
-import { useState } from "react";
+import { useState ,useEffect } from "react";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = React.useState(false);
   const [abs, setAbs] = React.useState(false);
+  const [windowSize, setWindowSize] = useState({
+      width: window.innerWidth,
+      height: window.innerHeight,
+    });
+  
+    useEffect(() => {
+      const handleResize = () => {
+        setWindowSize({
+          width: window.innerWidth,
+          height: window.innerHeight,
+        });
+      };
+  
+      window.addEventListener("resize", handleResize);
+  
+      // Ensure `result` is reset when the screen width is greater than 1024px
+      if (windowSize.width > 1024) {
+        setMenuOpen(false);
+      }
+  
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }, [windowSize.width]);
+  
 
   const openMenu = () => {
     setMenuOpen(!menuOpen);
