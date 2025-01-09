@@ -76,7 +76,7 @@ function App() {
                 section={<Suggestions />}
               ></Block>
             </div>
-            <div className="flex gap-x-4 max-[1584px]:flex-col flex-row">
+            <div className="flex gap-x-4 md:flex-row flex-col">
               <Bottom
                 className="w-1/2"
                 icon={<IoIosGitCompare />}
