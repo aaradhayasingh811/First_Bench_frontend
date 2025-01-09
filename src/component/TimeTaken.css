@@ -1,0 +1,45 @@
+/* .time-taken {
+    font-family: Arial, sans-serif;
+  }
+  
+  .scale-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px 0;
+  }
+  
+  .scale-image {
+    width: 100%;
+    display: block;
+  }
+  
+  .green-bar {
+    position: absolute;
+    top: 40%;
+    height: 10px;
+    background-color: green;
+  }
+  
+  .red-bar {
+    position: absolute;
+    top: 40%;
+    height: 10px;
+    background-color: red;
+  }
+  
+  .slider {
+    position: absolute;
+    top: 30%;
+    width: 10px;
+    height: 20px;
+    background-color: blue;
+    cursor: grab;
+  }
+  
+  p {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+  }
+   */
