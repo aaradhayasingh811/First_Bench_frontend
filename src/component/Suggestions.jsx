@@ -2,7 +2,7 @@ import React from "react";
 
 const Suggestions = () => {
   return (
-    <div className="flex justify-between px-2 py-7 items-center gap-x-2">
+    <div className="flex justify-center px-2 py-7 items-center gap-x-2 2xl:flex-nowrap flex-wrap">
       <div className="flex flex-col justify-center items-center gap-y-2">
         <div className="bg-[#5B5DAD] text-white w-max text-xs p-1 rounded">Q. 1-12</div>
         <div className="p-3 bg-purple-50 border-2 border-dotted border-purple-300">

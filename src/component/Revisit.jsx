@@ -4,7 +4,7 @@ import { IoIosInformationCircleOutline } from "react-icons/io";
 
 const Revisit = () => {
   return (
-    <div className='bg-[#fff] p-6 border-2 border-gray-200 my-2 rounded-2xl'>
+    <div className='bg-[#fff] p-6 border-[1px] border-gray-200 my-2 rounded-2xl'>
         <div className="text-xl font-bold my-1">Revisit Paper</div>
         <div className="my-2 text-base text-slate-500 font-medium leading-tight">
             Challenge your friends by just simply sharing a link to this test

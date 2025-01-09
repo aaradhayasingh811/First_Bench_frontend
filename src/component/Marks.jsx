@@ -3,7 +3,7 @@ import { HiOutlineNewspaper } from "react-icons/hi2";
 
 const Marks = () => {
   return (
-    <div className="bg-[#fff] p-6 border-2 border-gray-200 my-2 rounded-2xl ">
+    <div className="bg-[#fff] p-6 border-[1px] border-gray-200 my-2 rounded-2xl ">
       <div className="flex bg-purple-50 p-2 justify-between items-center text-sm rounded min-[1150px]:flex-row min-[1024px]:flex-col">
         <div className="flex gap-x-4 xl:flex-row flex-col items-center">
           <div className="">
@@ -22,10 +22,10 @@ const Marks = () => {
         </div>
         {/* <div className="border-e-2 border-slate-300 "></div> */}
         <div className="flex flex-col items-center justify-center">
-          <div className="bg-[#009990] text-gray-200 w-max px-1 rounded font-bold text-[10px] ">
+          <div className="bg-[#58B7B4] text-gray-200 w-max px-1 rounded font-bold text-[10px] ">
             76%
           </div>
-          <div className="text-[#009990] text-[10px] font-medium">ACCURACY</div>
+          <div className="text-[#58B7B4] text-[10px] font-medium">ACCURACY</div>
         </div>
       </div>
       <div className="p-2 my-4 bg-purple-50 rounded">
@@ -49,7 +49,7 @@ const Marks = () => {
           <div className="text-xs font-bold text-gray-400">
             By <span className="text-[#111]">Parth Akotkar</span>
           </div>
-          <div className=" bg-[#009990] text-gray-200 px-2 rounded-full">
+          <div className=" bg-[#58B7B4] text-gray-200 px-2 rounded-full">
             <p className="text-[10px] font-bold">
               <span className="text-[12px]">92%</span> ACCURACY
             </p>

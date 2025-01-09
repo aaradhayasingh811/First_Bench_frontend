@@ -18,7 +18,7 @@ export function Barchart() {
         borderColor: "#8486D6", // Border color
         borderWidth: 1,
         borderRadius: 10,
-        barThickness: 20, 
+        barThickness: 15, 
       },
     ],
   };
@@ -63,7 +63,7 @@ export function Barchart() {
   };
 
   return (
-    <div style={{ height: "300px", width: "100%" }} ref={chartRef}>
+    <div style={{ height: "300px", width: "80%" }} className="mx-auto" ref={chartRef}>
       <Bar data={data} options={options} />
     </div>
   );

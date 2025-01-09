@@ -16,7 +16,7 @@ export const Subject = () => {
             text: "Current Affairs",
         },
         {
-            color:"#800000",
+            color:"#dc2626",
             text: "General Studies",
         },
         {
@@ -28,7 +28,7 @@ export const Subject = () => {
             text: "Social Studies",
         },
         {
-            color:"#800000",
+            color:"#dc2626",
             text: "English Literature",
         },
         {
