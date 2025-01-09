@@ -44,7 +44,7 @@ function App() {
               Check your Result
             </button>
             {result && <Result abs="true" />}
-            <div className="flex gap-4 justify-center">
+            <div className="flex gap-4 justify-center sm:flex-row flex-col">
               <Compare  />
               <Compare  />
               <Compare  />
