@@ -5,7 +5,7 @@ import Revisit from './Revisit'
 
 const Result = ({abs}) => {
   return (
-    <div className={`bg-purple-50 border-2 border-gray-200 my-2 rounded-2xl ${abs && 'absolute'}`}>
+    <div className={`bg-purple-50 border-2 border-gray-200 my-2 rounded-2xl ${abs && 'absolute left-0'}`}>
       <div className="flex justify-center items-center flex-col">
         <img src={result} alt="Result Image" className='h-28 w-28' />
         <p className='text-2xl font-medium text-[#545AA7] text-center'>Your Result!</p>

@@ -35,7 +35,7 @@ function App() {
           <div className="lg:w-[30%] p-5 lg:flex flex-col hidden">
             <Result className="rounded-lg" />
           </div>
-          <div className="lg:w-[70%] w-full p-5">
+          <div className="lg:w-[70%] w-full sm:p-5 ">
             <button
               className="bg-[#545AA7] lg:hidden flex my-3 text-gray-200 items-center justify-center font-medium p-2 rounded w-max"
               onClick={handleShow}
@@ -43,7 +43,7 @@ function App() {
               <FaArrowLeft className="me-2 animate-bounce ease-linear" />
               Check your Result
             </button>
-            {result && <Result abs="true" />}
+            {result && <Result abs="true" className="left-0" />}
             <div className="flex gap-4 justify-center sm:flex-row flex-col">
               <Compare  />
               <Compare  />
