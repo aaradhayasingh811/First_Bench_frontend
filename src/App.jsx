@@ -32,7 +32,7 @@ function App() {
     <>
       <BrowserRouter>
         <Navbar />
-        <div className="content w-full flex 2xl:px-32 px-8 bg-[#FAF9F6]">
+        <div className="content w-full flex 2xl:px-32 px-8 " style={{backgroundColor:"rgb(249,250,252)"}}>
           <div className="lg:w-[30%] p-5 lg:flex flex-col hidden">
             <Result className="rounded-lg" />
           </div>

@@ -3,13 +3,13 @@ import { Chart } from "react-google-charts";
 
 export const data = [
   ["Slots", "Accuracy", { role: "style" }],
-  ["1", 80, "#545AA7"],
-  ["2", 45, "#545AA7"],
-  ["3", 30, "#545AA7"],
-  ["4", 60, "#545AA7"],
-  ["5", 58, "#545AA7"],
-  ["6", 48, "#545AA7"],
-  ["7", 70, "#545AA7"],
+  ["1", 80, "color: #545AA7; stroke-width: 1; opacity: 0.9"], // Custom style
+  ["2", 45, "color: #545AA7; stroke-width: 1; opacity: 0.8"],
+  ["3", 30, "color: #545AA7; stroke-width: 1; opacity: 0.7"],
+  ["4", 60, "color: #545AA7; stroke-width: 1; opacity: 0.9"],
+  ["5", 58, "color: #545AA7; stroke-width: 1; opacity: 0.8"],
+  ["6", 48, "color: #545AA7; stroke-width: 1; opacity: 0.7"],
+  ["7", 70, "color: #545AA7; stroke-width: 1; opacity: 0.9"],
 ];
 
 export const options = {
