@@ -1,9 +1,9 @@
-Dynamo Dashboard
-
+**Dynamo Dashboard
+**
 A modern, responsive frontend for Dynamo, a dashboard application that provides insightful test results, scores, and advanced visualizations. This project focuses on delivering an intuitive and interactive user experience with advanced data representation and subject-based insights.
 
-Features
-
+**Features
+**
 1. User Results Summary
 
 Display test results with total marks, obtained marks, and accuracy percentage.
@@ -32,22 +32,57 @@ Show approach data (e.g., based on facts, analysis, elimination, guesses).
 
 Provide actionable suggestions categorized by difficulty (easy, medium, hard).
 
-Technologies Used
-
+**Technologies Used
+**
 Core Frameworks and Libraries
 
-React.js: Core framework for building the application.
+**React.js** : Core framework for building the application.
 
-Tailwind CSS: For responsive and modern styling.
+**Tailwind CSS**: For responsive and modern styling.
+**
+Material UI (MUI):** Pre-built React components for an elegant UI.
 
-Material UI (MUI): Pre-built React components for an elegant UI.
+**React-Icons**: Icon library for adding visual enhancements.
 
-React-Icons: Icon library for adding visual enhancements.
-
-Data Visualization
-
+**Data Visualization
+**
 Chart.js: For creating responsive and interactive charts and graphs.
 
-Responsiveness
+**Responsiveness**
 
 Fully responsive design to adapt to different screen sizes and devices.
+
+Installation
+
+Follow the steps below to set up the project locally:
+
+Prerequisites
+
+Node.js (v14 or above)
+
+npm or yarn
+
+Steps :
+
+Clone the repository:
+
+git clone 'https://github.com/aaradhayasingh811/First_Bench_frontend.git'
+
+Navigate to the project directory:
+
+cd first-bench-dashboard
+
+Install dependencies:
+
+npm install
+# or
+yarn install
+
+Start the development server:
+
+npm run dev
+# or
+yarn dev
+
+Open http://localhost:5176 to view it in your browser.
+
