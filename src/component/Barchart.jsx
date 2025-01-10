@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { Bar } from "react-chartjs-2";
+import {Minutes} from "./Minutes";
 import {
   Chart as ChartJS,
   BarElement,
@@ -78,19 +79,27 @@ export function Barchart() {
 
   return (
     <>
-      <div
-        style={{ height: "300px", width: "80%" }}
-        className="sm:flex hidden"
+    <div className=" flex-col sm:flex hidden">
+        <Minutes className=""  />
+        <div
+        style={{ height: "200px", width: "90%" }}
+        className=" ms-0"
         ref={chartRef}
+
       >
-        <Bar data={data} options={options} className="sm:ms-10 ms-5" />
+
+        <Bar data={data} options={options} className="sm:ms-10 ms-5 mt-8" />
       </div>
-      <div
-        style={{ height: "300px", width: "100%" }}
-        className="sm:hidden flex"
+      </div>
+      <div className="sm:hidden flex flex-col">
+      <Minutes />
+            <div
+        style={{ height: "200px", width: "100%" }}
+        className="my-7"
         ref={chartRef}
       >
         <Bar data={data} options={options} className="sm:ms-10 ms-0" />
+      </div>
       </div>
     </>
   );

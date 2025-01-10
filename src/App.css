@@ -7,3 +7,14 @@
 body {
   overflow-x: hidden;
 }
+
+/* .hr-lines:before{
+  content:" ";
+  display: block;
+  height: 4px;
+  width: 130px;
+  position: absolute;
+  top: 150%;
+  left: 0;
+  background: #3FB9BB;
+} */
