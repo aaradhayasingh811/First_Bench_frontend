@@ -20,7 +20,6 @@ const Marks = () => {
             </div>
           </div>
         </div>
-        {/* <div className="border-e-2 border-slate-300 "></div> */}
         <div className="flex flex-col items-center justify-center">
           <div className="bg-[#3FB9BB] text-gray-200 w-max px-1 rounded font-bold text-[10px] ">
             76%

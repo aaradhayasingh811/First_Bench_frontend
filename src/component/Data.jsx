@@ -22,9 +22,7 @@ const Data = () => {
   return (
     <div className="flex gap-y-1 flex-col p-2">
       {itemList.map((list) => {
-        return (
-        <Rectcomp text={list.text} percentage={list.percent} />
-        )
+        return <Rectcomp text={list.text} percentage={list.percent} />;
       })}
     </div>
   );

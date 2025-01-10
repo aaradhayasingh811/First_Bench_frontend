@@ -10,44 +10,42 @@ import { TbLetterP } from "react-icons/tb";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoMenu } from "react-icons/io5";
 import { RxCross1 } from "react-icons/rx";
-import { useState ,useEffect } from "react";
-import {BasicSelect} from "./BasicSelect";
+import { useState, useEffect } from "react";
+import { BasicSelect } from "./BasicSelect";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = React.useState(false);
   const [abs, setAbs] = React.useState(false);
   const [windowSize, setWindowSize] = useState({
-      width: window.innerWidth,
-      height: window.innerHeight,
-    });
-  
-    useEffect(() => {
-      const handleResize = () => {
-        setWindowSize({
-          width: window.innerWidth,
-          height: window.innerHeight,
-        });
-      };
-  
-      window.addEventListener("resize", handleResize);
-  
-      if (windowSize.width > 1024) {
-        setMenuOpen(false);
-      }
-  
-      return () => {
-        window.removeEventListener("resize", handleResize);
-      };
-    }, [windowSize.width]);
-  
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    if (windowSize.width > 1024) {
+      setMenuOpen(false);
+    }
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [windowSize.width]);
 
   const openMenu = () => {
     setMenuOpen(!menuOpen);
-    setAbs(!abs)
+    setAbs(!abs);
   };
   const closeMenu = () => {
     setMenuOpen(!menuOpen);
-    setAbs(!abs)
-
+    setAbs(!abs);
   };
   return (
     <>
@@ -70,22 +68,40 @@ const Navbar = () => {
               className="w-10 h-10"
             />
           </Link>
-          <Link to="/" className="flex items-center hover:drop-shadow-2xl hover:text-white rounded-lg">
+          <Link
+            to="/"
+            className="flex items-center hover:drop-shadow-2xl hover:text-white rounded-lg"
+          >
             <TiHomeOutline className="me-2" /> Dashboard
           </Link>
-          <Link to="/" className="flex items-center hover:drop-shadow-2xl hover:text-white rounded-lg">
+          <Link
+            to="/"
+            className="flex items-center hover:drop-shadow-2xl hover:text-white rounded-lg"
+          >
             <WiStars className="me-2" /> FirstGuru
           </Link>
-          <Link to="/" className="flex items-center hover:drop-shadow-2xl hover:text-white rounded-lg">
+          <Link
+            to="/"
+            className="flex items-center hover:drop-shadow-2xl hover:text-white rounded-lg"
+          >
             <TiHomeOutline className="me-2" /> TownHall
           </Link>
-          <Link to="/" className="flex items-center hover:drop-shadow-2xl hover:text-white rounded-lg">
+          <Link
+            to="/"
+            className="flex items-center hover:drop-shadow-2xl hover:text-white rounded-lg"
+          >
             <AiOutlineThunderbolt className="me-2" /> AI Evaluation
           </Link>
-          <Link to="/" className="flex items-center hover:drop-shadow-2xl hover:text-white rounded-lg">
+          <Link
+            to="/"
+            className="flex items-center hover:drop-shadow-2xl hover:text-white rounded-lg"
+          >
             <GoGraph className="me-2" /> Performance
           </Link>
-          <Link to="/" className="flex items-center hover:drop-shadow-2xl hover:text-white rounded-lg">
+          <Link
+            to="/"
+            className="flex items-center hover:drop-shadow-2xl hover:text-white rounded-lg"
+          >
             <IoNewspaperOutline className="me-2" /> Mock Test
           </Link>
         </div>
@@ -98,8 +114,7 @@ const Navbar = () => {
               P
             </p>
             <p className=" items-center font-medium sm:flex hidden">
-              {/* Profile <IoIosArrowDown /> */}
-              <BasicSelect className="text-white"/>
+              <BasicSelect className="text-white" />
             </p>
           </button>
           <button className="lg:hidden text-xl" onClick={openMenu}>
@@ -109,30 +124,51 @@ const Navbar = () => {
       </div>
       <div
         id="menu"
-        className={`${
-          menuOpen ? "flex" : "hidden"
-        } ${abs && "absolute"} right-0 backdrop-blur-lg flex-col font-[400] bg-gray-400 text-[#FAF9F6] w-max p-4 gap-y-5 min-h-screen float-end `}
+        className={`${menuOpen ? "flex" : "hidden"} ${
+          abs && "absolute"
+        } right-0 backdrop-blur-lg flex-col font-[400] bg-gray-400 text-[#FAF9F6] w-max p-4 gap-y-5 min-h-screen float-end `}
       >
-        <button className="flex items-center p-2 hover:bg-slate-200 hover:text-gray-900 rounded hover:backdrop-opacity-60" onClick={closeMenu}>
+        <button
+          className="flex items-center p-2 hover:bg-slate-200 hover:text-gray-900 rounded hover:backdrop-opacity-60"
+          onClick={closeMenu}
+        >
           <RxCross1 className="me-2" />
           Close
         </button>
-        <Link to="/" className="flex items-center p-2 hover:bg-slate-200 hover:text-gray-900 rounded hover:backdrop-opacity-60">
+        <Link
+          to="/"
+          className="flex items-center p-2 hover:bg-slate-200 hover:text-gray-900 rounded hover:backdrop-opacity-60"
+        >
           <TiHomeOutline className="me-2" /> Dashboard
         </Link>
-        <Link to="/" className="flex items-center p-2 hover:bg-slate-200 hover:text-gray-900 rounded hover:backdrop-opacity-60">
+        <Link
+          to="/"
+          className="flex items-center p-2 hover:bg-slate-200 hover:text-gray-900 rounded hover:backdrop-opacity-60"
+        >
           <WiStars className="me-2" /> FirstGuru
         </Link>
-        <Link to="/" className="flex items-center p-2 hover:bg-slate-200 hover:text-gray-900 rounded hover:backdrop-opacity-60">
+        <Link
+          to="/"
+          className="flex items-center p-2 hover:bg-slate-200 hover:text-gray-900 rounded hover:backdrop-opacity-60"
+        >
           <TiHomeOutline className="me-2" /> TownHall
         </Link>
-        <Link to="/" className="flex items-center p-2 hover:bg-slate-200 hover:text-gray-900 rounded hover:backdrop-opacity-60">
+        <Link
+          to="/"
+          className="flex items-center p-2 hover:bg-slate-200 hover:text-gray-900 rounded hover:backdrop-opacity-60"
+        >
           <AiOutlineThunderbolt className="me-2" /> AI Evaluation
         </Link>
-        <Link to="/" className="flex items-center p-2 hover:bg-slate-200 hover:text-gray-900 rounded hover:backdrop-opacity-60">
+        <Link
+          to="/"
+          className="flex items-center p-2 hover:bg-slate-200 hover:text-gray-900 rounded hover:backdrop-opacity-60"
+        >
           <GoGraph className="me-2" /> Performance
         </Link>
-        <Link to="/" className="flex items-center p-2 hover:bg-slate-200 hover:text-gray-900 rounded hover:backdrop-opacity-60">
+        <Link
+          to="/"
+          className="flex items-center p-2 hover:bg-slate-200 hover:text-gray-900 rounded hover:backdrop-opacity-60"
+        >
           <IoNewspaperOutline className="me-2" /> Mock Test
         </Link>
       </div>
