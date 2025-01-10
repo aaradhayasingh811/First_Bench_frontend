@@ -3,7 +3,7 @@ import { HiOutlineNewspaper } from "react-icons/hi2";
 
 const Marks = () => {
   return (
-    <div className="bg-[#fff] p-6 border-[1px] border-gray-200 my-2 rounded-2xl ">
+    <div className="bg-[#fff] px-6 py-4 border-[1px] border-gray-200 my-2 rounded-2xl ">
       <div className="flex bg-purple-50 p-2 justify-between items-center text-sm rounded min-[1150px]:flex-row min-[1024px]:flex-col">
         <div className="flex gap-x-4 xl:flex-row flex-col items-center">
           <div className="">
