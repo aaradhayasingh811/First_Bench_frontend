@@ -1,6 +1,6 @@
-First Bench Dashboard
+Dynamo Dashboard
 
-A modern, responsive frontend for First Bench, a dashboard application that provides insightful test results, scores, and advanced visualizations. This project focuses on delivering an intuitive and interactive user experience with advanced data representation and subject-based insights.
+A modern, responsive frontend for Dynamo, a dashboard application that provides insightful test results, scores, and advanced visualizations. This project focuses on delivering an intuitive and interactive user experience with advanced data representation and subject-based insights.
 
 Features
 
