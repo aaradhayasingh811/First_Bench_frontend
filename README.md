@@ -1,8 +1,53 @@
-# React + Vite
+First Bench Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive frontend for First Bench, a dashboard application that provides insightful test results, scores, and advanced visualizations. This project focuses on delivering an intuitive and interactive user experience with advanced data representation and subject-based insights.
 
-Currently, two official plugins are available:
+Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. User Results Summary
+
+Display test results with total marks, obtained marks, and accuracy percentage.
+
+Provide actionable prompts like "Practice More" and "Revisit Paper."
+
+2. Subject Insights
+
+Highlight subject-wise performance and understanding.
+
+Use color-coded tags for quick comprehension.
+
+3. Interactive Charts
+
+Visualize data using bar charts and progress bars for better comparison and understanding.
+
+Present response time and time taken with graphical meters.
+
+4. Comparison Metrics
+
+Include accuracy comparison across multiple parameters.
+
+Show approach data (e.g., based on facts, analysis, elimination, guesses).
+
+5. Suggestions & Tips
+
+Provide actionable suggestions categorized by difficulty (easy, medium, hard).
+
+Technologies Used
+
+Core Frameworks and Libraries
+
+React.js: Core framework for building the application.
+
+Tailwind CSS: For responsive and modern styling.
+
+Material UI (MUI): Pre-built React components for an elegant UI.
+
+React-Icons: Icon library for adding visual enhancements.
+
+Data Visualization
+
+Chart.js: For creating responsive and interactive charts and graphs.
+
+Responsiveness
+
+Fully responsive design to adapt to different screen sizes and devices.
