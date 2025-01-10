@@ -114,7 +114,7 @@ function App() {
                 className="w-1/2"
                 icon={<FaTimeline />}
                 text="Time Taken"
-                children={<Scale r1="40%" g1="33%" r2="40%" g2="65%" />}
+                children={<Scale r1="40%" g1="33%" r2="40%" g2="30%" purple2="30%" />}
               />
             </div>
           </div>
