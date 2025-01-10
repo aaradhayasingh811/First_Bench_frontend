@@ -62,8 +62,13 @@ export function Barchart() {
   };
 
   return (
-    <div style={{ height: "300px", width: "80%" }} className="" ref={chartRef}>
+    <>
+    <div style={{ height: "300px", width: "80%" }} className="sm:flex hidden" ref={chartRef}>
       <Bar data={data} options={options} className="sm:ms-10 ms-5" />
     </div>
+     <div style={{ height: "300px", width: "100%" }} className="sm:hidden flex" ref={chartRef}>
+     <Bar data={data} options={options} className="sm:ms-10 ms-0" />
+   </div>
+   </>
   );
 }
