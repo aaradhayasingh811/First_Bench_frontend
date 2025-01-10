@@ -4,7 +4,7 @@ export const Subject = () => {
 
     const tagList = [
         {
-            color:"#58B7B4",
+            color:"#3FB9BB",
             text: "Geography",
         },
         {
@@ -12,15 +12,15 @@ export const Subject = () => {
             text: "Politics",
         },
         {
-            color:"#58B7B4",
+            color:"#3FB9BB",
             text: "Current Affairs",
         },
         {
-            color:"#dc2626",
+            color:"#CA2F2F",
             text: "General Studies",
         },
         {
-            color:"#58B7B4",
+            color:"#3FB9BB",
             text: "Mathematics",
         },
         {
@@ -28,7 +28,7 @@ export const Subject = () => {
             text: "Social Studies",
         },
         {
-            color:"#dc2626",
+            color:"#CA2F2F",
             text: "English Literature",
         },
         {
@@ -36,14 +36,14 @@ export const Subject = () => {
             text: "Indian History",
         },
         {
-            color:"#58B7B4",
+            color:"#3FB9BB",
             text: "Economics",
         },
         
     ]
   return (
     <div>
-        <h1 className='text-lg font-semibold px-2 pb-3'>Subject Understanding</h1>
+        <h1 className='text-base font-semibold px-2 pb-3 py-2 text-gray-900'>Subject Understanding</h1>
         <div className="flex flex-wrap gap-2 px-2 py-2">
             {tagList.map((list)=>{
                 return(

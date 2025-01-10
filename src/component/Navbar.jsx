@@ -11,7 +11,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { IoMenu } from "react-icons/io5";
 import { RxCross1 } from "react-icons/rx";
 import { useState ,useEffect } from "react";
-
+import {BasicSelect} from "./BasicSelect";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = React.useState(false);
   const [abs, setAbs] = React.useState(false);
@@ -30,7 +30,6 @@ const Navbar = () => {
   
       window.addEventListener("resize", handleResize);
   
-      // Ensure `result` is reset when the screen width is greater than 1024px
       if (windowSize.width > 1024) {
         setMenuOpen(false);
       }
@@ -52,7 +51,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <div className="bg-gray-700 p-2 text-[#ddd] font-extralight flex lg:justify-around justify-between">
+      <div className="bg-[#40475A] p-2 text-[#ddd] font-extralight flex lg:justify-around justify-between">
         <div className="lg:hidden flex">
           <Link to="/">
             <img
@@ -71,22 +70,22 @@ const Navbar = () => {
               className="w-10 h-10"
             />
           </Link>
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center hover:drop-shadow-2xl hover:text-white rounded-lg">
             <TiHomeOutline className="me-2" /> Dashboard
           </Link>
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center hover:drop-shadow-2xl hover:text-white rounded-lg">
             <WiStars className="me-2" /> FirstGuru
           </Link>
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center hover:drop-shadow-2xl hover:text-white rounded-lg">
             <TiHomeOutline className="me-2" /> TownHall
           </Link>
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center hover:drop-shadow-2xl hover:text-white rounded-lg">
             <AiOutlineThunderbolt className="me-2" /> AI Evaluation
           </Link>
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center hover:drop-shadow-2xl hover:text-white rounded-lg">
             <GoGraph className="me-2" /> Performance
           </Link>
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center hover:drop-shadow-2xl hover:text-white rounded-lg">
             <IoNewspaperOutline className="me-2" /> Mock Test
           </Link>
         </div>
@@ -94,12 +93,13 @@ const Navbar = () => {
           <button className="sm:flex hidden items-center">
             <TbBell className="text-white font-semibold text-xl" />
           </button>
-          <button className="sm:px-4 sm:py-2 sm:bg-black rounded flex items-center justify-around">
+          <button className="sm:px-4  sm:bg-black rounded flex items-center justify-around">
             <p className="px-4 py-1 rounded text-red-500 bg-red-100 font-bold sm:me-2">
               P
             </p>
             <p className=" items-center font-medium sm:flex hidden">
-              Profile <IoIosArrowDown />
+              {/* Profile <IoIosArrowDown /> */}
+              <BasicSelect className="text-white"/>
             </p>
           </button>
           <button className="lg:hidden text-xl" onClick={openMenu}>
@@ -113,26 +113,26 @@ const Navbar = () => {
           menuOpen ? "flex" : "hidden"
         } ${abs && "absolute"} right-0 backdrop-blur-lg flex-col font-[400] bg-gray-400 text-[#FAF9F6] w-max p-4 gap-y-5 min-h-screen float-end `}
       >
-        <button className="flex items-center" onClick={closeMenu}>
+        <button className="flex items-center p-2 hover:bg-slate-200 hover:text-gray-900 rounded hover:backdrop-opacity-60" onClick={closeMenu}>
           <RxCross1 className="me-2" />
           Close
         </button>
-        <Link to="/" className="flex items-center">
+        <Link to="/" className="flex items-center p-2 hover:bg-slate-200 hover:text-gray-900 rounded hover:backdrop-opacity-60">
           <TiHomeOutline className="me-2" /> Dashboard
         </Link>
-        <Link to="/" className="flex items-center">
+        <Link to="/" className="flex items-center p-2 hover:bg-slate-200 hover:text-gray-900 rounded hover:backdrop-opacity-60">
           <WiStars className="me-2" /> FirstGuru
         </Link>
-        <Link to="/" className="flex items-center">
+        <Link to="/" className="flex items-center p-2 hover:bg-slate-200 hover:text-gray-900 rounded hover:backdrop-opacity-60">
           <TiHomeOutline className="me-2" /> TownHall
         </Link>
-        <Link to="/" className="flex items-center">
+        <Link to="/" className="flex items-center p-2 hover:bg-slate-200 hover:text-gray-900 rounded hover:backdrop-opacity-60">
           <AiOutlineThunderbolt className="me-2" /> AI Evaluation
         </Link>
-        <Link to="/" className="flex items-center">
+        <Link to="/" className="flex items-center p-2 hover:bg-slate-200 hover:text-gray-900 rounded hover:backdrop-opacity-60">
           <GoGraph className="me-2" /> Performance
         </Link>
-        <Link to="/" className="flex items-center">
+        <Link to="/" className="flex items-center p-2 hover:bg-slate-200 hover:text-gray-900 rounded hover:backdrop-opacity-60">
           <IoNewspaperOutline className="me-2" /> Mock Test
         </Link>
       </div>

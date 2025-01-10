@@ -58,7 +58,7 @@ function App() {
         <Navbar />
         <div
           className="content w-full flex 2xl:px-32 px-8 "
-          style={{ backgroundColor: "rgb(249,250,252)" }}
+          style={{ backgroundColor: "#FEFEFE" }}
         >
           <div className="lg:w-[30%] p-5 lg:flex flex-col hidden">
             <Result className="rounded-lg" />
@@ -73,9 +73,9 @@ function App() {
             </button>
             {result && <Result abs="true" className="left-0" />}
             <div className="flex gap-4 justify-center sm:flex-row flex-col">
-              <Compare />
-              <Compare />
-              <Compare />
+              <Compare className="w-1/3" />
+              <Compare className="w-1/3" />
+              <Compare className="w-1/3" />
             </div>
             <div className="flex gap-2 min-[1143px]:flex-row flex-col">
               <Block

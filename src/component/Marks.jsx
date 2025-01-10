@@ -22,10 +22,10 @@ const Marks = () => {
         </div>
         {/* <div className="border-e-2 border-slate-300 "></div> */}
         <div className="flex flex-col items-center justify-center">
-          <div className="bg-[#58B7B4] text-gray-200 w-max px-1 rounded font-bold text-[10px] ">
+          <div className="bg-[#3FB9BB] text-gray-200 w-max px-1 rounded font-bold text-[10px] ">
             76%
           </div>
-          <div className="text-[#58B7B4] text-[10px] font-medium">ACCURACY</div>
+          <div className="text-[#3FB9BB] text-[10px] font-medium">ACCURACY</div>
         </div>
       </div>
       <div className="p-2 my-4 bg-purple-50 rounded">
@@ -49,7 +49,7 @@ const Marks = () => {
           <div className="text-xs font-bold text-gray-400">
             By <span className="text-[#111]">Parth Akotkar</span>
           </div>
-          <div className=" bg-[#58B7B4] text-gray-200 px-2 rounded-full">
+          <div className=" bg-[#3FB9BB] text-gray-200 px-2 rounded-full">
             <p className="text-[10px] font-bold">
               <span className="text-[12px]">92%</span> ACCURACY
             </p>

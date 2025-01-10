@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import { Bar } from "react-chartjs-2";
 import { Chart as ChartJS, BarElement, CategoryScale, LinearScale, Tooltip, Title, Legend } from "chart.js";
 
-// Register the necessary Chart.js components
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Title, Legend);
 
 export function Barchart() {
@@ -14,8 +13,8 @@ export function Barchart() {
       {
         label: "Accuracy",
         data: [80, 45, 30, 60, 58, 48, 70],
-        backgroundColor: "rgba(132, 134, 214, 0.9)", // Custom color with opacity
-        borderColor: "#8486D6", // Border color
+        backgroundColor: "rgba(132, 134, 214, 0.9)", 
+        borderColor: "#8486D6", 
         borderWidth: 1,
         borderRadius: 10,
         barThickness: 15, 
@@ -27,7 +26,7 @@ export function Barchart() {
     responsive: true,
     maintainAspectRatio: false,
     plugins: {
-      legend: { display: false }, // Hide legend
+      legend: { display: false }, 
       title: {
         display: false,
         text: "Accuracy per Slot",
@@ -40,7 +39,7 @@ export function Barchart() {
           text: "Slots",
         },
         grid: {
-          display: false, // Hide vertical grid lines
+          display: false, 
         },
       },
       y: {
@@ -49,22 +48,22 @@ export function Barchart() {
           text: "Accuracy (%)",
         },
         ticks: {
-          callback: (value) => `${value}%`, // Add '%' to y-axis labels
-          stepSize: 25, // Step size between values
+          callback: (value) => `${value}%`, 
+          stepSize: 25,
         },
         grid: {
-          drawBorder: true, // Display border line
-          color: "#e0e0e0", // Horizontal grid line color
+          drawBorder: true, 
+          color: "#e0e0e0", 
         },
         min: 0,
-        max: 100, // Explicitly set max and min values
+        max: 100, 
       },
     },
   };
 
   return (
-    <div style={{ height: "300px", width: "80%" }} className="mx-auto" ref={chartRef}>
-      <Bar data={data} options={options} />
+    <div style={{ height: "300px", width: "80%" }} className="" ref={chartRef}>
+      <Bar data={data} options={options} className="sm:ms-10 ms-5" />
     </div>
   );
 }
